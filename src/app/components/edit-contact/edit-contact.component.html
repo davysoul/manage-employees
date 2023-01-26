@@ -1,0 +1,49 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col">
+      <p class="h3 text-danger fw-bold">Edit Contact</p>
+      <p class="fst-italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+    </div>
+  </div>
+</div>
+<!----Form Edit contact--->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <form [formGroup]="formEditContact" (ngSubmit)="handleUpdate()">
+        <div class="mb-2">
+          <input type="text" class="form-control"  placeholder="Name" formControlName="name">
+        </div>
+        <div class="mb-2">
+          <input type="text" class="form-control" placeholder="Photo Url"  formControlName="photoUrl">
+        </div>
+        <div class="mb-2">
+          <input type="email" class="form-control" placeholder="Email" formControlName="email">
+        </div>
+        <div class="mb-2">
+          <input type="number" class="form-control" placeholder="Mobile" formControlName="mobile">
+        </div>
+        <div class="mb-2">
+          <input type="text" class="form-control" placeholder="Company" formControlName="company">
+        </div>
+        <div class="mb-2">
+          <input type="text" class="form-control" placeholder="Title" formControlName="title">
+        </div>
+        <div class="mb-2">
+          <select class="form-control" formControlName="groupId">
+            <option value="">Select a Group</option>
+          </select>
+        </div>
+        <div class="mb-2">
+          <button class="btn btn-success" type="submit">Update </button>
+          <a class="btn btn-dark ms-2" routerLink="/contacts/admin">Close</a>
+        </div>
+      </form>
+    </div>
+    <div class="col-sm-4">
+      <img src="http://assets.stickpng.com/images/585e4bcdcb11b227491c3396.png" class="contact-img">
+    </div>
+  </div>
+</div>
+

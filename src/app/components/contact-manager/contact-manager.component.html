@@ -1,0 +1,78 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col">
+      <p class="h3 text-danger fw-bold">
+        NG Contacts
+        <a class="btn btn-danger btn-sm" routerLink="/contacts/add"><i class="bi bi-plus-circle-fill"></i>New</a>
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <form>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="row">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Search User">
+
+            </div>
+            <div class="col">
+              <button class="btn btn-info"><i class="bi bi-search"></i></button>
+
+            </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!----Loading spinner--->
+<div *ngIf="loading">
+ <app-spinner></app-spinner>
+</div>
+<!----Error message--->
+<div *ngIf="!loading && errorMessage">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <p class="h3 text-danger fw-bold">{{errorMessage}}</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!------Cards---->
+<div class="container mt-3" *ngIf="!loading && contacts.length>0">
+  <div class="row">
+    <div class="col-md-6" *ngFor="let c of contacts">
+      <div class="card list-group-item-danger shadow-lg mt-2">
+        <div class="card-body">
+          <div class="row align-items-center">
+            <div class="col-sm-4">
+              <img [src]="c.photo" class="contact-img">
+            </div>
+            <div class="col-sm-7">
+              <ul class="list-group">
+                <li class="list-group-item">Name:<span class="fw-bold">{{c.name}}</span></li>
+                <li class="list-group-item">Email:<span class="fw-bold">{{c.email}}</span></li>
+                <li class="list-group-item">Mobile:<span class="fw-bold">{{c.mobile}}</span></li>
+              </ul>
+            </div>
+            <div class="col-sm-1 d-flex flex-column justify-content-center align-items-center">
+               <a class="btn btn-warning my-1 " routerLink="/contacts/view/{{c.id}}">
+                 <i class="bi bi-eye"></i>
+               </a>
+              <a class="btn btn-primary my-1 " routerLink="/contacts/edit/{{c.id}}">
+                <i class="bi bi-pencil-fill"></i>
+              </a>
+              <button class="btn btn-danger my-1" (click)="handleDelete(c)">
+                <i class="bi bi-trash"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

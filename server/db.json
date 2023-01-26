@@ -1,0 +1,48 @@
+{
+  "contacts": [
+    {
+      "id": "fb08425c-a818-d3ba-f33f-e83ba701efd3",
+      "name": "Messi",
+      "photoUrl": "https://www.kindpng.com/picc/m/163-1636340_user-avatar-icon-avatar-transparent-user-icon-png.png",
+      "email": "messi@gmail.com",
+      "mobile": 8190112233,
+      "company": "Service",
+      "title": "Footballer",
+      "groupId": "1"
+    },
+    {
+      "id": "211c0fd9-196b-1f18-624d-10645651d2c0",
+      "name": "Bill",
+      "email": "bill@gmail.com",
+      "mobile": "4399000",
+      "company": "Service",
+      "title": "Computer science",
+      "photo": "https://cdn3.vectorstock.com/i/1000x1000/30/97/flat-business-man-user-profile-avatar-icon-vector-4333097.jpg",
+      "groupId": "2"
+    },
+    {
+      "name": "Toto",
+      "photoUrl": "toto",
+      "email": "toto@gmail.com",
+      "mobile": 234567,
+      "company": "IBM",
+      "title": "Developer",
+      "groupId": "2",
+      "id": "700affd9-6b2d-c485-e937-06da70f297d5"
+    }
+  ],
+  "group": [
+    {
+      "id": "1",
+      "name": "friend"
+    },
+    {
+      "id": "2",
+      "name": "Colleague"
+    },
+    {
+      "id": "3",
+      "name": "Family"
+    }
+  ]
+}

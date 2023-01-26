@@ -1,0 +1,12 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+body{
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #fcebe7;
+}
+.contact-img{
+  width: 150px;
+  border-radius: 50%;
+}
+
